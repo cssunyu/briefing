@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>二升三升學說明會 — 祥耀文理補習班</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Noto Sans TC', 'PingFang TC', 'STHeiti', sans-serif;
+    background:#0a0e14; color:#d4d8de; overflow-x:hidden;
+  }
+  .slide {
+    min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+    padding:60px 80px; position:relative; border-bottom:1px solid rgba(255,255,255,0.06);
+  }
+  .slide.cover { align-items:center; text-align:center; background:linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1f2e 100%); }
+  .slide.cover h1 { font-size:3.2em; font-weight:900; letter-spacing:0.08em; color:#e6edf3; margin-bottom:16px; }
+  .slide.cover h1 span { color:#58a6ff; }
+  .slide.cover .sub { font-size:1.3em; color:#8b949e; margin-bottom:8px; }
+  .slide.cover .org { font-size:1.1em; color:#58a6ff; margin-top:32px; letter-spacing:0.12em; }
+  h2 { font-size:2em; font-weight:700; color:#e6edf3; margin-bottom:24px; display:flex; align-items:center; gap:12px; }
+  h2 .num { background:#58a6ff; color:#0d1117; width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.1em; font-weight:900; }
+  h3 { font-size:1.25em; font-weight:600; color:#c9d1d9; margin:20px 0 10px; }
+  .note { color:#8b949e; font-size:0.85em; margin-top:4px; }
+  .highlight { color:#58a6ff; font-weight:600; }
+  .warn { color:#f0883e; }
+  .tag {
+    display:inline-block; background:rgba(88,166,255,0.12); color:#58a6ff;
+    padding:3px 10px; border-radius:6px; font-size:0.85em; margin:2px 4px;
+  }
+  /* Tables */
+  .tbl-wrap { overflow-x:auto; margin:12px 0; border-radius:10px; border:1px solid rgba(255,255,255,0.08); }
+  table { width:100%; border-collapse:collapse; font-size:0.92em; }
+  th { background:rgba(88,166,255,0.15); color:#58a6ff; padding:10px 12px; text-align:center; font-weight:600; white-space:nowrap; }
+  td { padding:8px 12px; text-align:center; border-bottom:1px solid rgba(255,255,255,0.05); }
+  tr:hover td { background:rgba(255,255,255,0.03); }
+  .td-l { text-align:left; }
+  .hdr { background:rgba(240,136,62,0.12); color:#f0883e; }
+  /* Grid */
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+  .card {
+    background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06);
+    border-radius:12px; padding:20px;
+  }
+  .card .big { font-size:2.2em; font-weight:900; color:#58a6ff; }
+  .card .lbl { color:#8b949e; font-size:0.9em; margin-top:4px; }
+  .flow { display:flex; align-items:center; gap:16px; flex-wrap:wrap; justify-content:center; margin:20px 0; }
+  .flow .step {
+    background:rgba(88,166,255,0.08); border:1px solid rgba(88,166,255,0.2);
+    border-radius:12px; padding:16px 24px; text-align:center; min-width:100px;
+  }
+  .flow .step .snum { font-size:1.5em; font-weight:900; color:#58a6ff; }
+  .flow .step .slbl { font-size:0.85em; color:#8b949e; margin-top:4px; }
+  .flow .arrow { font-size:1.5em; color:#8b949e; }
+  .timeline { display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+  .timeline .ph { background:rgba(255,255,255,0.04); border-radius:8px; padding:14px 18px; min-width:180px; }
+  .timeline .ph .m { color:#58a6ff; font-weight:700; margin-bottom:6px; }
+  .timeline .ph .d { color:#8b949e; font-size:0.85em; }
+  .row { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  .bar { height:8px; border-radius:4px; background:#58a6ff; }
+  .bar-bg { background:rgba(255,255,255,0.06); border-radius:4px; width:100%; height:8px; margin:8px 0; }
+  .kpi { display:flex; gap:32px; flex-wrap:wrap; margin:16px 0; }
+  .kpi .v { font-size:2em; font-weight:900; color:#58a6ff; }
+  .kpi .l { font-size:0.85em; color:#8b949e; }
+  @media(max-width:768px) {
+    .slide { padding:40px 24px; }
+    .grid2, .grid3 { grid-template-columns:1fr; }
+    .slide.cover h1 { font-size:2em; }
+    .flow { flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: 封面 -->
+<div class="slide cover">
+  <h1>二升三 <span>升學說明會</span></h1>
+  <div class="sub">國中教育會考｜免試入學｜優先免試｜課程規劃</div>
+  <div class="org">祥耀文理補習班</div>
+</div>
+
+<!-- SLIDE 2: 桃連區免試入學比序積分對照表 -->
+<div class="slide">
+  <h2><span class="num">01</span>免試入學比序積分對照表</h2>
+  <p class="note">桃連區高級中等學校免試入學 — 總積分 <span class="highlight">100 分</span>（上限）</p>
+
+  <h3>📋 比序項目三大類</h3>
+  <div class="tbl-wrap">
+  <table>
+    <tr><th style="width:12%">類別</th><th style="width:18%">項目</th><th>內容</th><th style="width:10%">上限</th></tr>
+    <tr>
+      <td rowspan="4"><strong>適性輔導</strong></td>
+      <td>畢業資格</td><td class="td-l">符合畢業資格 6 分／修業資格 2 分</td><td>6</td>
+    </tr>
+    <tr>
+      <td>志願序</td><td class="td-l">第1~3志願 15分；4~6志願 12分；7~9志願 9分；10~12志願 6分；13~15志願 3分；16~30志願 1分<br><span class="note">專業群科同職群連續選填視為同一志願序</span></td><td>15</td>
+    </tr>
+    <tr>
+      <td>生涯規劃</td><td class="td-l">與家長意見相符 2分；與導師意見相符 2分；與輔導教師意見相符 2分</td><td>6</td>
+    </tr>
+    <tr>
+      <td>就近入學</td><td class="td-l">桃連區及共同就學區學生符合就近入學得 5 分</td><td>5</td>
+    </tr>
+    <tr>
+      <td rowspan="4"><strong>多元學習<br>表現</strong></td>
+      <td>均衡學習</td><td class="td-l">健體、藝術、綜合、科技四領域，單領域五學期平均及格各得 3 分</td><td>9</td>
+    </tr>
+    <tr>
+      <td>品德表現</td><td class="td-l">銷過後無記過或二次警告以下 6分；獎勵另計（大功4.5/記功1.5/嘉獎0.5），合計上限 10 分</td><td>10</td>
+    </tr>
+    <tr>
+      <td>幹部＋服務</td><td class="td-l">班級或學生幹部任滿1學期 2分（上限4分）；志願服務每小時 0.3 分</td><td>10</td>
+    </tr>
+    <tr>
+      <td>才藝表現</td><td class="td-l">競賽：國際性第1名10分～第6名5分；全國性8～4分；區域性7～3分；全市6～3分（團體折半）</td><td>5</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>會考表現</strong></td>
+      <td>體適能</td><td class="td-l">柔軟度、瞬發力、肌力肌耐力、心肺耐力單項達門檻各 6 分</td><td>6</td>
+    </tr>
+    <tr>
+      <td>會考成績</td><td class="td-l">國、數、英、社、自五科：精熟 6分／基礎 4分／待加強 2分；寫作測驗：4~6級 3分／2~3級 2分／1級 1分</td><td>33</td>
+    </tr>
+    <tr><td colspan="2"><strong>本土語言認證</strong></td><td class="td-l">通過原住民族語／客語／閩南語認證各得 2 分</td><td>2</td></tr>
+  </table>
+  </div>
+</div>
+
+<!-- SLIDE 3: 會考積點換算 -->
+<div class="slide">
+  <h2><span class="num">02</span>會考等級標示與積點換算</h2>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>📊 各科等級對應點數</h3>
+      <div class="tbl-wrap">
+      <table>
+        <tr><th>A++</th><th>A+</th><th>A</th><th>B++</th><th>B+</th><th>B</th><th>C</th></tr>
+        <tr>
+          <td><span class="highlight" style="font-size:1.3em;font-weight:900;">7</span></td>
+          <td><span style="font-size:1.3em;font-weight:700;">6</span></td>
+          <td>5</td><td>4</td><td>3</td><td>2</td><td>1</td>
+        </tr>
+      </table>
+      </div>
+      <p class="note" style="margin-top:12px;">滿點 = 7點 × 5科 = <span class="highlight">35 點</span></p>
+    </div>
+    <div class="card">
+      <h3>🎯 超額比序流程</h3>
+      <div class="flow" style="flex-direction:column;align-items:flex-start;">
+        <div class="row"><span class="tag">第1關</span> 總積分（滿分100）→ 積分高者優先</div>
+        <div class="row"><span class="tag">第2關</span> 志願序積分 → 志願序積分高者優先</div>
+        <div class="row"><span class="tag">第3關</span> 會考積點（35點）→ 積點高者優先</div>
+        <div class="row"><span class="tag">第4關</span> 各科等級標示 → 依序比國文→數學→英語→社會→自然</div>
+      </div>
+      <p class="warn" style="margin-top:12px;">⚠ 會考成績雖只占 33 分，但往往是決定錄取結果的關鍵！</p>
+    </div>
+  </div>
+
+  <h3>📝 志願序計分範例</h3>
+  <div class="grid2" style="margin-top:12px;">
+    <div class="card">
+      <strong>❌ 不同職群交叉排列</strong><br>
+      001高中 → 002高職(機械) → 003高中 → 004高職(商管)<br>
+      <span class="warn">→ 職群不連續，分段計分！</span>
+    </div>
+    <div class="card">
+      <strong>✅ 同職群連續排列</strong><br>
+      001高中 → 002高中 → 003高職(機械科A) → 004高職(機械科B) → 005高職(機械科C)<br>
+      <span class="highlight">→ 同職群連續，第1~5志願皆為 15 分！</span>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: 錄取規則詳解 -->
+<div class="slide">
+  <h2><span class="num">03</span>錄取規則 — 四關比序</h2>
+
+  <div class="flow">
+    <div class="step"><div class="snum">第1關</div><div class="slbl">比總積分<br><span class="highlight">100分</span></div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="snum">第2關</div><div class="slbl">比會考積點<br><span class="highlight">35點</span></div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="snum">第3關</div><div class="slbl">比志願序<br><span class="highlight">積分</span></div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="snum">第4關</div><div class="slbl">比各科等級<br><span class="highlight">國→數→英→社→自</span></div></div>
+  </div>
+
+  <div class="grid2" style="margin-top:24px;">
+    <div class="card">
+      <h3>📐 積分結構</h3>
+      <table>
+        <tr><th style="width:40%">類別</th><th>分數</th></tr>
+        <tr><td>適性輔導</td><td class="highlight">32 分</td></tr>
+        <tr><td>多元學習表現</td><td class="highlight">35 分</td></tr>
+        <tr><td>會考成績</td><td class="highlight">33 分</td></tr>
+        <tr style="font-weight:700;"><td>總積分</td><td style="color:#f0883e;">100 分</td></tr>
+      </table>
+      <p class="note">適性輔導與多元表現通常可拿滿分，會考 33 分是決勝點</p>
+    </div>
+    <div class="card">
+      <h3>⚔ 實戰對比</h3>
+      <p><strong>甲生</strong>：5科全 A++ → 7×5 = <span class="highlight">35點</span></p>
+      <p><strong>乙生</strong>：5科全 A+ → 6×5 = <span class="highlight">30點</span></p>
+      <p style="margin-top:8px;">→ 總積分相同時，會考積點高者勝出！</p>
+      <p class="warn" style="margin-top:12px;">💡 每一科從 A+ 拉到 A++，就多 1 點，可能決定錄取結果</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: 各校錄取門檻參考 -->
+<div class="slide">
+  <h2><span class="num">04</span>桃園區各高中錄取門檻參考</h2>
+  <p class="note">以下為歷年落點參考，實際錄取分數每年變動</p>
+
+  <div class="grid3" style="margin-top:16px;">
+    <div class="card">
+      <div class="big">5A++</div><div class="lbl">武陵高中</div>
+      <div class="bar-bg"><div class="bar" style="width:100%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">4A++1A+</div><div class="lbl">桃園高中</div>
+      <div class="bar-bg"><div class="bar" style="width:90%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">3A1B1C</div><div class="lbl">內壢高中</div>
+      <div class="bar-bg"><div class="bar" style="width:72%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">2A3B</div><div class="lbl">陽明高中</div>
+      <div class="bar-bg"><div class="bar" style="width:58%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">1A4B</div><div class="lbl">永豐高中</div>
+      <div class="bar-bg"><div class="bar" style="width:48%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">5B</div><div class="lbl">南崁高中</div>
+      <div class="bar-bg"><div class="bar" style="width:40%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">5B</div><div class="lbl">大園國際高中</div>
+      <div class="bar-bg"><div class="bar" style="width:38%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">5B</div><div class="lbl">壽山高中</div>
+      <div class="bar-bg"><div class="bar" style="width:35%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">5B</div><div class="lbl">青埔高中</div>
+      <div class="bar-bg"><div class="bar" style="width:32%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">5B</div><div class="lbl">平鎮高中</div>
+      <div class="bar-bg"><div class="bar" style="width:30%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">5B</div><div class="lbl">大溪高中</div>
+      <div class="bar-bg"><div class="bar" style="width:28%"></div></div>
+    </div>
+    <div class="card">
+      <div class="big">5C</div><div class="lbl">大崙高中</div>
+      <div class="bar-bg"><div class="bar" style="width:18%"></div></div>
+    </div>
+  </div>
+  <p class="note" style="margin-top:16px;">📌 以上為參考門檻，實際仍需看當年度考生整體表現與各校名額</p>
+</div>
+
+<!-- SLIDE 6: 114年度各校會考成績統計（精選） -->
+<div class="slide">
+  <h2><span class="num">05</span>114年度 各校會考成績統計</h2>
+  <p class="note">桃連區各國中 114 年會考表現 — 依 5A 以上比率排序（節錄）</p>
+  <div class="tbl-wrap">
+  <table style="font-size:0.85em;">
+    <tr><th>學校</th><th>9年級人數</th><th>5A++</th><th>5A++比率</th><th>5A以上</th><th>5A比率</th><th>5B以上</th><th>5C</th></tr>
+    <tr><td class="td-l">復旦高中國中部</td><td>564</td><td>28</td><td class="highlight">4.96%</td><td>340</td><td class="highlight">60.28%</td><td>250</td><td>0</td></tr>
+    <tr><td class="td-l">振聲高中國中部</td><td>425</td><td>18</td><td>4.24%</td><td>196</td><td>46.12%</td><td>225</td><td>0</td></tr>
+    <tr><td class="td-l">六和高中國中部</td><td>343</td><td>10</td><td>2.92%</td><td>101</td><td>29.45%</td><td>242</td><td>0</td></tr>
+    <tr><td class="td-l">東興國中</td><td>690</td><td>1</td><td>0.14%</td><td>62</td><td>8.99%</td><td>423</td><td>26</td></tr>
+    <tr><td class="td-l" style="color:#58a6ff;">青埔國中</td><td>352</td><td>1</td><td>0.28%</td><td>32</td><td>9.09%</td><td>206</td><td>17</td></tr>
+    <tr><td class="td-l">中壢國中</td><td>458</td><td>0</td><td>0.00%</td><td>27</td><td>5.90%</td><td>232</td><td>21</td></tr>
+    <tr><td class="td-l">過嶺國中</td><td>230</td><td>1</td><td>0.43%</td><td>13</td><td>5.65%</td><td>97</td><td>18</td></tr>
+    <tr><td class="td-l">永豐高中國中部</td><td>300</td><td>2</td><td>0.67%</td><td>13</td><td>4.33%</td><td>146</td><td>26</td></tr>
+    <tr><td class="td-l">龍岡國中</td><td>282</td><td>0</td><td>0.00%</td><td>2</td><td>0.71%</td><td>134</td><td>31</td></tr>
+    <tr><td class="td-l">平鎮國中</td><td>621</td><td>6</td><td>0.97%</td><td>82</td><td>13.20%</td><td>389</td><td>13</td></tr>
+  </table>
+  </div>
+  <div class="kpi" style="margin-top:16px;">
+    <div><div class="v">0.66%</div><div class="l">全區 5A++ 比率</div></div>
+    <div><div class="v">9.49%</div><div class="l">全區 5A 以上比率</div></div>
+    <div><div class="v">6.58%</div><div class="l">全區 5C 比率</div></div>
+  </div>
+</div>
+
+<!-- SLIDE 7: 會考各科等級分佈 -->
+<div class="slide">
+  <h2><span class="num">06</span>會考各科等級分布趨勢</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>📊 113年 各科精熟率</h3>
+      <table>
+        <tr><th>科目</th><th>A++</th><th>A+</th><th>A</th><th>精熟合計</th></tr>
+        <tr><td class="td-l">國文</td><td>10.33%</td><td>10.10%</td><td>18.86%</td><td class="highlight">~26%</td></tr>
+        <tr><td class="td-l">英語</td><td>6.65%</td><td>11.23%</td><td>12.13%</td><td class="highlight">~23%</td></tr>
+        <tr><td class="td-l">數學</td><td>—</td><td>—</td><td>—</td><td class="highlight">~25%</td></tr>
+        <tr><td class="td-l">社會</td><td>—</td><td>—</td><td>—</td><td class="highlight">~24%</td></tr>
+        <tr><td class="td-l">自然</td><td>—</td><td>—</td><td>—</td><td class="highlight">~24%</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>📊 114年 各科精熟率</h3>
+      <table>
+        <tr><th>科目</th><th>A++</th><th>A+</th><th>A</th><th>精熟合計</th></tr>
+        <tr><td class="td-l">國文</td><td>8.23%</td><td>8.98%</td><td>17.30%</td><td class="highlight">~26%</td></tr>
+        <tr><td class="td-l">英語</td><td>6.23%</td><td>11.27%</td><td>12.48%</td><td class="highlight">~24%</td></tr>
+        <tr><td class="td-l">數學</td><td>—</td><td>—</td><td>—</td><td class="highlight">~25%</td></tr>
+        <tr><td class="td-l">社會</td><td>—</td><td>—</td><td>—</td><td class="highlight">~24%</td></tr>
+        <tr><td class="td-l">自然</td><td>—</td><td>—</td><td>—</td><td class="highlight">~24%</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="card" style="margin-top:20px;">
+    <h3>📈 趨勢觀察</h3>
+    <p>• 國文科 <span class="warn">A++ 從 10.33% → 8.23%</span>（大幅下降），競爭更激烈</p>
+    <p>• 英語閱讀精熟率約 <span class="highlight">24%</span>，聽力待加強仍高達 <span class="warn">32%</span></p>
+    <p>• 數學、社會、自然精熟率維持在 <span class="highlight">24~25%</span> 穩定區間</p>
+    <p>• <span class="highlight">A++ 是真正的稀缺資源</span> — 各科僅 6~8% 考生能拿到</p>
+  </div>
+</div>
+
+<!-- SLIDE 8: 優先免試入學 -->
+<div class="slide">
+  <h2><span class="num">07</span>優先免試入學規劃</h2>
+  <p class="note">115 學年度優先免試入學 — 各國中優先名額一覽</p>
+
+  <div class="tbl-wrap">
+  <table style="font-size:0.85em;">
+    <tr><th>國中</th><th>畢業生</th><th>優先名額</th><th>武陵</th><th>桃高</th><th>內壢</th><th>陽明</th><th>平鎮</th><th>永豐</th><th>大園</th></tr>
+    <tr><td class="td-l">新明國中</td><td>135</td><td>9</td><td>1</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+    <tr><td class="td-l">內壢國中</td><td>777</td><td>47</td><td>1</td><td>0</td><td>2</td><td>0</td><td>8</td><td>8</td><td>7</td></tr>
+    <tr><td class="td-l">龍岡國中</td><td>282</td><td>17</td><td>1</td><td>0</td><td>1</td><td>0</td><td>3</td><td>0</td><td>1</td></tr>
+    <tr><td class="td-l">興南國中</td><td>87</td><td>6</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+    <tr><td class="td-l">自強國中</td><td>402</td><td>25</td><td>1</td><td>0</td><td>2</td><td>0</td><td>5</td><td>4</td><td>4</td></tr>
+  </table>
+  </div>
+  <div class="card" style="margin-top:20px;">
+    <h3>💡 優先免試重點</h3>
+    <p>• 各國中依畢業生人數分配優先名額（約 <span class="highlight">6~7%</span>）</p>
+    <p>• 武陵高中每校固定 <span class="highlight">1 名</span>優先名額</p>
+    <p>• 優先免試仍以會考成績為主要比序依據</p>
+    <p>• <span class="warn">優先免試 = 多一次機會，不代表降低錄取標準</span></p>
+  </div>
+</div>
+
+<!-- SLIDE 9: 課程進度規劃 -->
+<div class="slide">
+  <h2><span class="num">08</span>國三課程進度規劃</h2>
+  <p class="note">7月～隔年3月，進度與複習雙軌並進</p>
+
+  <div class="timeline">
+    <div class="ph"><div class="m">📘 7~10月</div><div class="d">第五冊進度<br>數學：相似形、圓、三角形三心<br>理化：運動學、力學、電學<br>搭配每週複習題本</div></div>
+    <div class="ph"><div class="m">📙 11~2月</div><div class="d">第六冊進度<br>數學：二次函數、統計機率、立體圖形<br>理化：電磁感應、天文、天氣<br>寒假密集複習 1~4 冊</div></div>
+    <div class="ph"><div class="m">📕 3月</div><div class="d">第六冊收尾 + 總衝刺<br>能源永續、地球科學<br>全科總複習模考<br>考前最後調整</div></div>
+  </div>
+
+  <h3>📅 一週課程安排（例）</h3>
+  <div class="tbl-wrap">
+  <table style="font-size:0.85em;">
+    <tr><th></th><th>數學</th><th>理化</th><th>國文</th><th>社會</th><th>備註</th></tr>
+    <tr><td class="td-l">平日</td><td>2堂/週</td><td>2堂/週</td><td>1堂/週</td><td>1堂/週</td><td>進度為主</td></tr>
+    <tr><td class="td-l">假日</td><td>複習題本</td><td>實驗+題本</td><td>寫作練習</td><td>圖表判讀</td><td>複習為輔</td></tr>
+  </table>
+  </div>
+
+  <div class="card" style="margin-top:20px; background:rgba(88,166,255,0.05);">
+    <p><strong>🎯 核心策略：</strong>維持一個班的穩定進度，到班照進度寫題本，<span class="highlight">進度與複習並進</span>，不偏廢任何一科。</p>
+  </div>
+</div>
+
+<!-- SLIDE 10: 暑期課程表（7-8月重點） -->
+<div class="slide">
+  <h2><span class="num">09</span>暑期課程規劃（7~8月）</h2>
+  <p class="note">打好國三基礎的黃金時期 — 第五冊超前部署</p>
+
+  <div class="tbl-wrap">
+  <table style="font-size:0.82em;">
+    <tr><th style="width:8%">週次</th><th>數學</th><th>理化</th><th>國文</th><th>社會</th></tr>
+    <tr><td>7/1~</td><td>比例線段</td><td>時間測量、生命的組成</td><td>國文1</td><td>地理1~2</td></tr>
+    <tr><td>7/7~</td><td>縮放與相似</td><td>位移與路徑長、速率與速度</td><td>國文2~3</td><td>地理3~4、歷史2、公民3</td></tr>
+    <tr><td>7/14~</td><td>相似三角形</td><td>加速度、牛頓第一定律</td><td>國文4</td><td>歷史3、公民1~2</td></tr>
+    <tr><td>7/21~</td><td>點、線、圓</td><td>牛頓第二、第三定律</td><td>國文5~6</td><td>地理5、歷史4</td></tr>
+    <tr><td>7/28~</td><td>圓心角、圓周角</td><td>圓周運動、萬有引力</td><td>模考</td><td>社會一二冊模考</td></tr>
+    <tr><td class="hdr">8/3~7</td><td class="hdr" colspan="4">🏖 小暑假休息</td></tr>
+    <tr><td>8/10~</td><td>相似三角形複習</td><td>牛頓第二運動定律</td><td>國文6</td><td>歷史4、地理6</td></tr>
+    <tr><td>8/17~</td><td>點線圓</td><td>牛頓第三、功與功率</td><td>國文7</td><td>歷史5、地理7</td></tr>
+    <tr><td>8/24~</td><td>圓心角、圓周角</td><td>功與能、能量守恆</td><td>國文8</td><td>地理8、公民6~7</td></tr>
+  </table>
+  </div>
+  <p class="note" style="margin-top:12px;">📌 暑假期間進度最快，務必全程出席；小暑假 8/3~8/7 休息五天</p>
+</div>
+
+<!-- SLIDE 11: 上學期課程表（9-12月） -->
+<div class="slide">
+  <h2><span class="num">10</span>上學期課程規劃（9~12月）</h2>
+
+  <div class="tbl-wrap">
+  <table style="font-size:0.82em;">
+    <tr><th style="width:8%">月份</th><th>數學</th><th>理化</th><th>國文</th><th>社會</th></tr>
+    <tr><td>9月</td><td>證明與推理、三角形三心</td><td>簡單機械、靜電、電流</td><td>國文8~10</td><td>地理8~9、歷史7~9、公民8~9</td></tr>
+    <tr><td>10月</td><td>三角形三心、二次函數</td><td>電壓、板塊運動、水與陸地</td><td>國文11~12</td><td>歷史10、地理10~12、公民12</td></tr>
+    <tr><td>11月</td><td>二次函數、統計與機率</td><td>天體、電與生活、電池</td><td>模考、國文13~15</td><td>社會一~四冊模考、地理13~15、歷史11~12</td></tr>
+    <tr><td>12月</td><td>統計機率、線面體</td><td>磁鐵磁場、電流磁效應、電磁感應</td><td>國文16~18</td><td>公民13~15、歷史13~15</td></tr>
+  </table>
+  </div>
+
+  <div class="grid2" style="margin-top:20px;">
+    <div class="card">
+      <h3>🎯 第五冊重點</h3>
+      <p>• 數學：<span class="highlight">相似形、圓、三角形三心</span> — 會考必考</p>
+      <p>• 理化：<span class="highlight">運動學、力學、電學</span> — 計算題大宗</p>
+    </div>
+    <div class="card">
+      <h3>🎯 第六冊重點</h3>
+      <p>• 數學：<span class="highlight">二次函數、統計機率</span></p>
+      <p>• 理化：<span class="highlight">電磁感應、天文、天氣</span></p>
+    </div>
+  </div>
+  <p class="note" style="margin-top:12px;">📌 中秋(9/25)、國慶(10/10)、元旦(1/1)、春節(2/5除夕) 依國定假日放假</p>
+</div>
+
+<!-- SLIDE 12: 下學期衝刺（1-3月） -->
+<div class="slide">
+  <h2><span class="num">11</span>下學期衝刺規劃（1~3月）</h2>
+
+  <div class="timeline">
+    <div class="ph">
+      <div class="m">📘 1月</div>
+      <div class="d">第六冊：立體圖形、天文<br>寒假密集複習<br>全科模擬考</div>
+    </div>
+    <div class="ph">
+      <div class="m">📙 2月</div>
+      <div class="d">第六冊：電磁感應、天氣<br>春節短期休整<br>1~6冊總複習起跑</div>
+    </div>
+    <div class="ph">
+      <div class="m">📕 3月</div>
+      <div class="d">第六冊：能源與永續發展<br>全科總複習密集模考<br>考前最後調整＆心態建立</div>
+    </div>
+  </div>
+
+  <h3>🏁 衝刺關鍵數字</h3>
+  <div class="kpi">
+    <div><div class="v">3月</div><div class="l">最後完整複習月</div></div>
+    <div><div class="v">4月</div><div class="l">考前調整，減少新進度</div></div>
+    <div><div class="v">5月</div><div class="l">會考月 🎯</div></div>
+  </div>
+
+  <div class="card" style="margin-top:16px; background:rgba(240,136,62,0.06);">
+    <p><strong>⚠ 關鍵提醒：</strong>第六冊內容在會考占比約 <span class="warn">25~30%</span>，不可因為趕複習而放掉第六冊進度。進度與複習並進是唯一正確策略。</p>
+  </div>
+</div>
+
+<!-- SLIDE 13: 結語 -->
+<div class="slide cover" style="background:linear-gradient(135deg, #0d1117 0%, #1a1f2e 50%, #0d1117 100%);">
+  <h1 style="font-size:2.4em;">會考不是終點，<br>是<span style="color:#58a6ff;">下一個起點</span></h1>
+  <div class="sub" style="margin-top:24px;">了解規則，掌握進度，踏實準備</div>
+  <div class="sub">祥耀陪你走過國三的每一步</div>
+  <div class="org" style="margin-top:40px;">祥耀文理補習班</div>
+</div>
+
+</body>
+</html>
